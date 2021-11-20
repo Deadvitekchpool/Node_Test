@@ -10,4 +10,15 @@ const nullToUndefined = (x) =>
     return p;
   }, {});
 
-module.exports = { undefinedToNull, nullToUndefined };
+function isMessageValid(msg) {
+  try{
+    let valid_msg = JSON.parse(msg);
+    return valid_msg
+  }
+  catch(e){
+    console.log(e.message);
+    return e
+  }
+};
+
+module.exports = { undefinedToNull, nullToUndefined, isMessageValid };

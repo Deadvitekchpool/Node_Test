@@ -1,0 +1,23 @@
+{"connectQuery": {
+    "type": "CONNECT", 
+    "payload": {
+        "name": "Deadvitekchpool", 
+        "message": ""
+        }
+    },
+
+"data_query": {
+    "type": "GET_DATA",
+    "payload": {
+        "name": "Deadvitekchpool",
+        "symbol": "zefu"
+        }
+    },
+
+"history_query": {
+    "type": "HISTORY",
+    "payload": {
+        "types": ["GET_DATA"]
+        }
+    }
+}

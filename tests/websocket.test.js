@@ -15,7 +15,7 @@ describe(`WebSocket`, () => {
       // Отправляем запрос и парсим ответ
       const { res: response } = await tdd.wsCreateAndSendMessage(message); //?
       const result = JSON.parse(response);
-
+      console.log("result", result);
       expect(result.type).toEqual(`ERROR`);
       expect(result.payload.message).toEqual(
         `Passed message should be JSON.parse'able`

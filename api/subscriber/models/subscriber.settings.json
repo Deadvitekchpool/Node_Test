@@ -2,13 +2,21 @@
   "kind": "collectionType",
   "collectionName": "subscribers",
   "info": {
-    "name": "subscriber",
+    "name": "Subscriber",
     "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
-  "attributes": {}
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "requests": {
+      "via": "username",
+      "collection": "request"
+    }
+  }
 }

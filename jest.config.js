@@ -2,7 +2,7 @@ require(`dotenv`).config();
 
 module.exports = {
   testEnvironment: "node",
-  testTimeout: 30000,
+  testTimeout: 0,
   // restoreMocks: true,
   // clearMocks: true,
   // resetMocks: true,

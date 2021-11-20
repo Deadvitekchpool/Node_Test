@@ -15,8 +15,15 @@ const { WebSoketServer } = require("../../services/websocket-server");
 module.exports = async () => {
   try {
     strapi; //?
-    const WSServer = new WebSoketServer({ server: strapi.server });
-    await WSServer.create();
+
+    console.log("sub",  await strapi.query('subscriber').find({username: `User`}));
+    if(strapi) {
+      // console.log('strapi.server', strapi.server);
+
+      const WSServer = new WebSoketServer({ server: strapi.server });
+      await WSServer.create();
+    }
+
   } catch (err) {
     console.error(err);
   }
